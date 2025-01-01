@@ -19,7 +19,7 @@ def find_first_unique_character(input_string):
     # If no unique characters are found
     return -1
 
-# Example usage
+# Usage (using the function I made) 
 input_string = input()
 result = find_first_unique_character(input_string)
 print("Index of the first unique character:", result)
