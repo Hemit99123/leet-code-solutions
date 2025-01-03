@@ -1,4 +1,7 @@
 # LeetCode Solutions
+
+---
+
 This repo simply contains all my leetcoding.
 
 ---
