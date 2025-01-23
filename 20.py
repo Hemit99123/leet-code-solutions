@@ -8,6 +8,9 @@ class Solution:
 
         for item in s:
             # Check if the stack is not empty before accessing stack[-1]
+            # This way there isn't a index error because if you try to access -1 idx 
+            # Whilst list is empty, it throws such errors which ruins some test cases
+            
             if stack and (
                 (item == ")" and stack[-1] == "(") or
                 (item == "]" and stack[-1] == "[") or
