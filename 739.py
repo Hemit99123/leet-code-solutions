@@ -17,3 +17,8 @@ class Solution:
                 answer.append(0)  # If no warmer day is found, append 0
 
         return answer
+
+# Using monotonic stack for more effiency:
+
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
