@@ -44,6 +44,7 @@ def is_balanced(text):
 
     return stack.size() == 0
 
+# Testing for correctness in my program
 print(is_balanced("({a+b})"))   
 print(is_balanced("))((a+b}{"))   
 print(is_balanced("((a+b))"))     
