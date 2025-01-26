@@ -1,3 +1,5 @@
+# Learnt that .pop() method removes last item BUT also returns it. good for other stack problems 
+
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
