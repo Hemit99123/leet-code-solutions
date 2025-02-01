@@ -27,14 +27,15 @@ print(" ".join(ans))
 
 # O(n^2) -> brute force approach
 
-elements = input().split()
+elements = list(map(int, input().split()))  # Convert input to integers
 
 ans = ['-1'] * len(elements)
 
 for i in range(len(elements)):
-    for y in range(i + 1, len(elements)):
-        if (elements[y] > elements[i]):
-            ans[i] = str(elements[y])
+    for y in range(i + 1, len(elements)):  # Look ahead
+        if elements[y] > elements[i]:  # Compare as integers
+            ans[i] = str(elements[y])  # Convert result to string
             break
 
 print(" ".join(ans))
+
