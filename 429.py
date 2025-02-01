@@ -7,19 +7,19 @@ Output: [5, 10, 10, -1, -1]
 '''
 
 
-elements = [4,5,2,10,8]
+elements = input().split()
 
-ans = [-1] * len(elements)
+ans = ['-1'] * len(elements)
 stack = []
 
 for index in range(len(elements)):
 
-    element = elements[index]
+    element = int(elements[index])
 
     if (stack):
-        while (stack and element > elements[stack[-1]]):
-            ans[stack[-1]] = element
+        while (stack and element > int(elements[stack[-1]])):
+            ans[stack[-1]] = str(element)
             stack.pop()    
     stack.append(index)
 
-print(ans)
+print(" ".join(ans))
