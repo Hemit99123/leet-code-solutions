@@ -4,14 +4,22 @@ Problem: For each element in an array, find the next greater element to the righ
 Example:
 Input: [4, 5, 2, 10, 8]
 Output: [5, 10, 10, -1, -1]
-''''
+'''
 
 
-class Solution:
-    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        ans = []
+elements = [4,5,2,10,8]
 
-        for i in range(len(nums1)):
-            for j in range(len(nums2)):
-                if (nums1[i] == nums2[j]):
-                    
+ans = [-1] * len(elements)
+stack = []
+
+for index in range(len(elements)):
+
+    element = elements[index]
+
+    if (stack):
+        while (stack and element > elements[stack[-1]]):
+            ans[stack[-1]] = element
+            stack.pop()    
+    stack.append(index)
+
+print(ans)
