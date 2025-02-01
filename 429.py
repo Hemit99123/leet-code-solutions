@@ -8,6 +8,8 @@ Output: [5, 10, 10, -1, -1]
 
 # O(n) or O(2n) -> monotonic stacks approach
 
+print("MONOTONIC STACKS:")
+
 elements = input().split()
 
 ans = ['-1'] * len(elements)
@@ -26,6 +28,8 @@ for index in range(len(elements)):
 print(" ".join(ans))
 
 # O(n^2) -> brute force approach
+
+print("BRUTE FORCE:")
 
 elements = list(map(int, input().split()))  # Convert input to integers
 
