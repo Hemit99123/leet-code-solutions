@@ -6,6 +6,7 @@ Input: [4, 5, 2, 10, 8]
 Output: [5, 10, 10, -1, -1]
 '''
 
+# O(n) or O(2n) -> monotonic stacks approach
 
 elements = input().split()
 
@@ -21,5 +22,19 @@ for index in range(len(elements)):
             ans[stack[-1]] = str(element)
             stack.pop()    
     stack.append(index)
+
+print(" ".join(ans))
+
+# O(n^2) -> brute force approach
+
+elements = input().split()
+
+ans = ['-1'] * len(elements)
+
+for i in range(len(elements)):
+    for y in range(i + 1, len(elements)):
+        if (elements[y] > elements[i]):
+            ans[i] = str(elements[y])
+            break
 
 print(" ".join(ans))
