@@ -42,4 +42,3 @@ for i in range(len(elements)):
             break
 
 print(" ".join(ans))
-
