@@ -1,4 +1,4 @@
--- Using POSTGRES 
+-- Using POSTGRES SQL
 
 SELECT id, movie, description, rating
 FROM Cinema
